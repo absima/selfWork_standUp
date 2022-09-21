@@ -47,10 +47,7 @@
 
   function spinTheWheel() {
     const randomPerson = sample(studentsPlusDegree);
-    console.log(randomPerson);
-    // spin the #wheel svg to the randomPerson.degrees after spinning a random number of times between 5 and 10
-    // and then stop the wheel at the randomPerson.degrees
-    const fakeNaturalSpins = (Math.floor(Math.random() * 5) + 5) * 360
+
 
 
     // generate a canvas element with document.creatElement("canvas")
@@ -67,13 +64,13 @@
     ctx.arc(250, 250, 200, 0, 2 * Math.PI);
     ctx.stroke();
     ctx.font = "30px Arial";
-    ctx.textAlign = "center";
+    ctx.textAlign = "left";
     ctx.textBaseline = "middle";
 
     studentsPlusDegree.forEach((student) => {
       const radians = student.degrees / oneRadian;
-      const x = 250 + 200 * Math.cos(radians);
       const y = 250 + 200 * Math.sin(radians);
+      const x = 250 + 200 * Math.cos(radians);
       // rotate the text to match segment degrees 
       // give each segment a unique fill color
 
@@ -83,24 +80,50 @@
       ctx.lineTo(250, 250);
       ctx.stroke();
 
-      ctx.save();
-      ctx.translate(x, y);
-      ctx.rotate(radians);
-      // ctx.fillStyle = "red";
-      // ctx.fill()
-      ctx.fillText(student.name, 0, 0);
-      ctx.restore();
+
+      // ctx.save();
+      // ctx.translate(y, x);
+      // ctx.rotate(radians);
+      // // ctx.fillStyle = "red";
+      // // ctx.fill()
+      // ctx.fillText(student.name, 0, 0);
+      // ctx.restore();
 
 
       ctx.save();
-      ctx.translate(x, y);
-      ctx.rotate(radians);
-      ctx.fillText(student.name, 0, 0);
+      ctx.translate(y, x);
+      ctx.rotate(-radians);
+      if (student.name === randomPerson.name) {
+        ctx.fillStyle = "red";
+        ctx.fillText(student.name, 0, 0);
+        ctx.fillStyle = "black";
+      } else {
+        ctx.fillText(student.name, 0, 0);
+      }
+
       ctx.restore();
     })
 
 
-    document.querySelector("canvas").style.transform = `rotate(${fakeNaturalSpins + randomPerson.degrees}deg)`;
+    const fakeNaturalSpins = Math.floor(Math.random() * 10) * 360;
+    console.log(fakeNaturalSpins, randomPerson.degrees, fakeNaturalSpins + randomPerson.degrees, randomPerson);
+
+    document.querySelector("canvas").style.transform = `rotate(${(fakeNaturalSpins) + (randomPerson.
+      degrees) - 90}deg)`;
+
+    // after the wheel has stopped spinning, show an alert with the name of the person who won
+    // redraw the text with the winner's name in red
+
+    setTimeout(() => {
+      // ctx.translate(250, 250);
+      // move to right edge of canvas
+      // ctx.translate(250, 0);
+      // rotate to face left
+      // ctx.rotate(90 - randomPerson.degrees * Math.PI / 180);
+      ctx.fillStyle = "red";
+      ctx.fillText(randomPerson.name, 0, 0);
+
+    }, 2000);
   }
 
   spinTheWheel()
