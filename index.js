@@ -66,7 +66,8 @@ function spin(){
   svg.innerHTML = "";
   combineTriangles(classArray);
   
-  const theta = Math.random() * minTheta;
+  theta +=Math.random() * theta;
+  console.log(theta)
   svg.style.transform = `rotate(${theta}deg)`;
   const iwon = reIndex(classArray, theta);
   const chosen = classArray[iwon];
@@ -134,7 +135,7 @@ const visited = [];
 const center_x = 50;
 const center_y = 50;
 const R = 60;
-const minTheta = 2000;
+let theta = 2000;
 
 let svg = document.querySelector("svg");
 
