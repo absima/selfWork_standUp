@@ -1,22 +1,22 @@
-body {
+/* body {
   background: rgb(202, 211, 212);
-}
+} */
 #main_content {
   display: flex;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-left: 10px;
   /* background-color: rgb(47, 81, 102); */
 }
 
-.below_header_row{
+/* .below_header_row{
   display: flex;
-}
+} */
 #leftCol {
   display: block;
 }
 
 #rightCol {
-  margin-left: 50px;
+  margin: auto;
   display: block;
 }
 
@@ -37,7 +37,7 @@ body {
   border: 1px solid black;
   overflow: hidden;
   /* transition: all ease 5s; */
-  background-color: rgb(10, 101, 86);
+  /* background-color: rgb(10, 101, 86); */
 }
 
 svg {
