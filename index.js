@@ -47,6 +47,15 @@ function combineSectors(sarray) {
   for (let i = 0; i < sarray.length; i++) {
     svg.innerHTML += drawSector(sarray, i);
   }
+  svg.innerHTML += `
+  <g onclick="spin()">
+  <ellipse id="clickme-svg-button" cx=${center_x} cy=${center_y} rx=${radius/4}  ry=${radius/4} style="stroke:black;stroke-width:0.5"/>
+  <text transform="translate(${center_x}, ${center_y})" fill="white" font-size="5")
+    text-anchor="middle"
+    alignment-baseline="middle"
+  >owidhjqwo</text>
+  </g>
+  `
 }
 
 function reIndex(sarray, theta) {
@@ -109,8 +118,6 @@ let svg = document.querySelector("svg");
 
 const date = new Date();
 document.getElementById("h3").innerText += " " + date.toLocaleDateString();
-
-document.querySelector("#spin").addEventListener("click", spin);
 
 combineSectors(classArray);
 
