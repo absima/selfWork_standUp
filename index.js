@@ -24,7 +24,7 @@ function drawSector(sarray, index) {
     const secElement = 
     `
     <ellipse id="student-${index}" cx=${center_x} cy=${center_y} rx=${radius}  ry=${radius} style="fill:hsl(${index/nsize*360}, 60%, ${clrlight}%);stroke:black;stroke-width:0.5"/>
-    <text transform="translate(${xtxt}, ${ytxt}) rotate(${1/nsize * 360 + nsize})" fill="white" font-size="5")>${name}</text>
+    <text transform="translate(${1.5*xtxt}, ${1.5*ytxt}) rotate(${1/nsize * 360 + nsize})" fill="white" font-size="5")>${name}</text>
     `
     return secElement; 
   }
@@ -71,8 +71,8 @@ function reIndex(sarray, theta) {
   const x = [...Array(sarray.length).keys()];
   const y = x.map((i) => (angle * i + theta) % 360);
   let index = y.indexOf(Math.min(...y));
-  !index ? (index = x.length - 2) : (index -= 1);
-  return index
+  // !index ? (index = x.length - 2) : (index -= 1);
+  return (sarray.length+index-1)%sarray.length
 }
 
 function grayOutAllButIdx(sarray, idx) {
@@ -145,16 +145,16 @@ function removeMe(event){
 
 
 let classArray = [
-  "Arthi",
-  "Bruno",
-  "David",
-  "Fabian",
-  "Fi",
-  "Jens",
-  "Julio",
-  "Katrin",
-  "Luben",
-  "Malaiz",
+  // "Arthi",
+  // "Bruno",
+  // "David",
+  // "Fabian",
+  // "Fi",
+  // "Jens",
+  // "Julio",
+  // "Katrin",
+  // "Luben",
+  // "Malaiz",
   "Marina",
   "Samin",
   "Sima",
@@ -172,7 +172,6 @@ let clrlight = 50;
 let svg = document.querySelector("svg");
 let table = document.querySelector("table");
 classArray.map((x,i) => table.innerHTML+=addRow(x,i))
-console.log(table)
 const date = new Date();
 document.getElementById("h3").innerText += " " + date.toLocaleDateString();
 
