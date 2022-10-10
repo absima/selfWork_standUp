@@ -1,32 +1,17 @@
-/* body {
-  background: rgb(202, 211, 212);
-} */
 #main_content {
   display: flex;
   margin-top: 50px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   /* background-color: rgb(47, 81, 102); */
 }
 
-/* .below_header_row{
-  display: flex;
-} */
-#leftCol {
-  display: block;
-}
-
-#rightCol {
-  margin: auto;
-  display: block;
-}
-
 .mainbox {
-  margin: 20px;
-  padding: 20px;
+  /* margin: 20px; */
+  /* padding: 20px; */
   position: relative;
   width: 400px;
   height: 400px;
-  display: block;
+  /* display: block; */
   margin: auto;
 }
 .box {
@@ -37,11 +22,10 @@
   border: 1px solid black;
   overflow: hidden;
   /* transition: all ease 5s; */
-  background-color: #6495ed;
+  /* background-color: rgb(10, 101, 86); */
 }
 
 svg {
-  clip-path: circle(49.5%);
   transition: all ease 3s;
 }
 
@@ -56,7 +40,7 @@ svg {
     filter: grayscale(0);
   }
   100% {
-    filter: grayscale(1);
+    filter: grayscale(0.9);
   }
 }
 
@@ -74,7 +58,7 @@ svg {
   color: black;
   box-shadow: 0 5px 20px #000;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -110,55 +94,10 @@ h3 {
   color: #00008b;
   margin: auto;
 }
-#below_header_row {
-  display: flex;
-  /* align-content: center; */
-  /* background-color: black; */
-  /* padding:50px; */
-  align-items: center;
-  /* align-content: space-around; */
-  /* justify-content: space-around; */
-  margin: auto;
-}
 
-#button {
-  background-color: #04aa6d; /* Green */
-  border: 8px solid black;
-  border-style: double;
-  border-radius: 50%;
-  color: white;
-  text-align: center;
-  display: block;
-  cursor: pointer;
 
-  /* min-width: 100px; */
-  height: 300px;
 
-  /* padding: 20px; */
-  /* text-decoration: none; */
-  /* margin: auto; */
-  /* margin-top: 10px; */
-}
 
-#clickButton {
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#clickText {
-  color: black;
-  font-weight: 700;
-  font-size: xx-large;
-  margin: 5px;
-  font-family: "Courier New", Courier, monospace;
-}
-
-#clickSubText {
-  font-size: large;
-  font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
-}
 
 #messageButtonTable {
   display: flex;
@@ -169,14 +108,14 @@ h3 {
 
 #myTable {
   font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   width: 100%;
 }
 
 #myTable td,
 #myTable th {
   border: 2px solid black;
-  padding: 8px;
+  padding: 2px;
 }
 
 #myTable tr:nth-child(even) {
@@ -188,8 +127,8 @@ h3 {
 }
 
 #myTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  /* padding-top: 12px; */
+  /* padding-bottom: 12px; */
   text-align: left;
   background-color: #6495ed;
   color: white;
