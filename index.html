@@ -1,131 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> morning stand up </title>
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"/>
+<head>
+  <title> morning stand up </title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
-      
-    <link rel="stylesheet" href="./style.css">
-  </head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 
-  <body class="body">
-    <header class="header_row">
-      <div id="header_column"> 
-        <h2> Morning Stand Up Session </h2>
-        <h3 id="h3"> Date: </h3>
-      </div>
-    </header>  
-    <div class="container" id="main_content"> 
-      <div id="mainbox" class="mainbox">
-        <div id="box" class="box">
-          <svg width="100%" height=100% viewBox="0 0 100 100" class="svg">
-    
-          </svg>     
-        </div>
-        <button id="spin">Click Me</button>
-      </div>
-      <div class="table_containr">
-        <table id="myTable">
-          <tr>
-            <th> </th>
-            <th>Name</th>
-            <th>Status</th>
-          </tr>
-          <tr>
-            <td> 1. </td>
-            <td> Arthi </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 2. </td>
-            <td> Bruno </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 3. </td>
-            <td> David </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 4. </td>
-            <td> Fabian </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 5. </td>
-            <td> Fi </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 6. </td>
-            <td> Jens </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 7. </td>
-            <td> Julio </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 8. </td>
-            <td> Katrin </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 9. </td>
-            <td> Luben </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 10. </td>
-            <td> Malaiz </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 11. </td>
-            <td> Marina </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 12. </td>
-            <td> Samin </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 13. </td>
-            <td> Sima </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 14. </td>
-            <td> Sivak </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 15. </td>
-            <td> Victor </td>
-            <td> Pending </td>
-          </tr>
-          <tr>
-            <td> 16. </td>
-            <td> Zan </td>
-            <td> Pending </td>
-          </tr>          
-        </table>
-      </div>
-      <!-- </div> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="body">
+  <header class="header_row">
+    <div id="header_column">
+      <h2> Morning Stand Up Session </h2>
+      <h3 id="h3"> Date: </h3>
     </div>
-    
-  </body>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 text-center align-middle">
+        <div id="mainbox" class="mainbox">
+          <div id="box" class="box">
+            <svg width="100%" height=100% viewBox="0 0 100 100" class="svg">
+              <g transform="translate(100,100)" stroke="#000" stroke-width="2"></g>
+            </svg>
+          </div>
+          <!-- <button id="spin">Click Me</button> -->
+        </div>
+      </div>
+      <div class="col-12 col-md-6 text-center align-middle">
+        <div class="table_cont">
+          <table id="myTable">
+            <tr>
+              <th> </th>
+              <th>Name</th>
+              <th>Status</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./index.js"> </script>
 
-  <script src="./index.js"> </script>
-
-  </html> 
+</html>
 
