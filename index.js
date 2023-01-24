@@ -48,7 +48,7 @@ function demo() {
 }
 
 function addEntry() {
-  event.preventDefault();
+  preventDefault();
   let input = document.getElementById('inputadd').value;
 
   if (input === '' || classArray.includes(input)) {
@@ -60,7 +60,7 @@ function addEntry() {
 }
 
 function removeEntry() {
-  event.preventDefault();
+  preventDefault();
   let input = document.getElementById('inputrem').value;
   let index = classArray.indexOf(input);
   if (index > -1) {
@@ -150,9 +150,14 @@ function reIndex(sarray, theta) {
 
 function grayOutAllButIdx(sarray, idx) {
   for (let i = 0; i < sarray.length; i++) {
-    document.getElementById(`entry-${i}`).style.filter = 'grayscale(0%)';
+    document.getElementById(`entry-${i}`).style.fill = `hsl(${
+      (i / sarray.length) * 360
+    }, 60%, ${clrlight}%)`;
+
     if (i !== idx) {
-      document.getElementById(`entry-${i}`).style.filter = 'grayscale(100%)';
+      document.getElementById(`entry-${i}`).style.fill = `hsl(${
+        (i / sarray.length) * 360
+      }, 60%, ${clrdark}%)`;
     }
   }
 }
@@ -187,3 +192,12 @@ function spin() {
     // classArray.splice(iwon, 1); // removing the chosen element
   }
 }
+
+// function grayOutAllButIdx(sarray, idx) {
+//   for (let i = 0; i < sarray.length; i++) {
+//     document.getElementById(`entry-${i}`).style.filter = 'grayscale(0%)';
+//     if (i !== idx) {
+//       document.getElementById(`entry-${i}`).style.filter = 'grayscale(100%)';
+//     }
+//   }
+// }
