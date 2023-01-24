@@ -1,56 +1,173 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>spinning wheel</title>
 
-<head>
-  <title> morning stand up </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
 
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <body class="body">
+    <header>
+      <div
+        id="header_column"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 1rem;
+        "
+      >
+        <h2>Spinning Wheel</h2>
+        <h4 id="h3">Today:</h4>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-12 col-md-6 text-center align-middle"
+          style="border: 1px solid #00008b; padding: 1rem"
+        >
+          <div id="mainbox" class="mainbox">
+            <div id="box" class="box">
+              <svg width="100%" height="100%" viewBox="0 0 100 100" class="svg">
+                <g
+                  transform="translate(50,50)"
+                  stroke="#000"
+                  stroke-width="2"
+                ></g>
+              </svg>
+            </div>
 
-  <link rel="stylesheet" href="./style.css">
-</head>
+            <div class="row justify-content-center align-items-center">
+              <div class="col-6 erase">
+                <button id="erase" class="btn btn-danger" onclick="erase()">
+                  Clear
+                </button>
+              </div>
 
-<body class="body">
-  <header class="header_row">
-    <div id="header_column">
-      <h2> Morning Stand Up Session </h2>
-      <h3 id="h3"> Date: </h3>
-    </div>
-  </header>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 text-center align-middle">
-        <div id="mainbox" class="mainbox">
-          <div id="box" class="box">
-            <svg width="100%" height=100% viewBox="0 0 100 100" class="svg">
-              <g transform="translate(100,100)" stroke="#000" stroke-width="2"></g>
-            </svg>
+              <div class="col-6 add">
+                <button id="add" class="btn btn-success" onclick="demo()">
+                  Demo
+                </button>
+              </div>
+            </div>
           </div>
-          <!-- <button id="spin">Click Me</button> -->
         </div>
-      </div>
-      <div class="col-12 col-md-6 text-center align-middle">
-        <div class="table_cont">
-          <table id="myTable">
-            <tr>
-              <th> </th>
-              <th>Name</th>
-              <th>Status</th>
-            </tr>
-          </table>
+        <div
+          class="col-12 col-md-6 text-center align-middle"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 1rem;
+            border: 1px solid #00008b;
+          "
+        >
+          <div class="inputs">
+            <div class="input-group mb-3">
+              <form
+                class="d-flex"
+                id="form"
+                onsubmit="addEntry()"
+                autocomplete="off"
+              >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add Entry"
+                  aria-label="Add Entry"
+                  aria-describedby="button-addon2"
+                  id="inputadd"
+                />
+                <button
+                  class="btn"
+                  type="button"
+                  id="button-addon2"
+                  onclick="addEntry()"
+                >
+                  <i
+                    class="bi bi-file-plus-fill"
+                    style="font-size: 1.5rem; font-weight: bold; color: #000"
+                  ></i>
+                </button>
+              </form>
+            </div>
+            <div class="input-group mb-3">
+              <form
+                class="d-flex"
+                id="form"
+                onsubmit="removeEntry()"
+                autocomplete="off"
+              >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Remove Entry"
+                  aria-label="Remove Entry"
+                  aria-describedby="button-addon2"
+                  id="inputrem"
+                />
+                <button
+                  class="btn"
+                  type="button"
+                  id="button-addon2"
+                  onclick="removeEntry()"
+                >
+                  <i
+                    class="bi bi-file-minus-fill"
+                    style="
+                      font-size: 1.5rem;
+                      font-weight: bold;
+                      color: rgb(22, 20, 20);
+                    "
+                  ></i>
+                </button>
+              </form>
+            </div>
+
+            <div class="confirm">
+              <h3 id="size">You have</h3>
+              <h3>The chosen one is:</h3>
+              <h3
+                id="chosen"
+                style="font-size: 2rem; font-weight: bold; color: #000"
+              ></h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-<script src="./index.js"> </script>
-
+    <footer class="footer_row">
+      <div
+        id="footer_column"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 1rem;
+        "
+      >
+        <h4>© 2022 by Simachew</h4>
+      </div>
+    </footer>
+  </body>
+  <script src="./index.js"></script>
 </html>
-

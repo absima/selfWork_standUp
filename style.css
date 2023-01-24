@@ -1,27 +1,12 @@
-/* * {
-  outline: 3px solid red;
-}
-
-.col-12 {
-  background: yellow !important;
-} */
-
 body {
   background: rgb(202, 211, 212);
 }
 
-#main_content {
-  display: flex;
-  margin-top: 30px;
-  margin-left: 10px;
-}
-
-
-.mainbox {
+/* .mainbox {
   margin: 20px;
   padding: 20px;
   width: 100%;
-}
+} */
 
 #spin {
   position: absolute;
@@ -33,14 +18,14 @@ body {
   height: 100%;
   position: relative;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 2px solid black;
   overflow: hidden;
-  /* transition: all ease 5s; */
-  background-color: #6495ed;
+  /* background-color: #6495ed; */
 }
 
 svg {
-  clip-path: circle(49.5%);
+  /* clip-path: circle(49.5%); */
+  clip-path: circle(50%);
   transition: all ease 3s;
 }
 
@@ -56,31 +41,9 @@ svg {
   }
 
   100% {
-    filter: grayscale(.9);
+    filter: grayscale(0.9);
   }
 }
-
-.table_cont{
-  margin: 20px 20px;
-}
-/*
-#spin {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  border: 5px solid black;
-  background-color: white;
-  color: black;
-  box-shadow: 0 5px 20px #000;
-  font-weight: bold;
-  font-size: 20px;
-  cursor: pointer;
-} */
-
 
 #header_row {
   justify-content: center;
@@ -101,10 +64,11 @@ svg {
 }
 
 h2 {
-  font-size: 40px;
-  border: 2px solid black;
-  background-color: #6495ed;
-  color: white;
+  font-size: 2.7rem;
+  /* border: 2px solid black; */
+  /* background-color: #6495ed; */
+  color: #00008b;
+
   margin: auto;
   font-weight: bold;
 }
@@ -149,12 +113,12 @@ h3 {
   font-weight: 700;
   font-size: xx-large;
   margin: 5px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #clickSubText {
   font-size: large;
-  font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
 }
 
 #messageButtonTable {
@@ -162,34 +126,6 @@ h3 {
   margin: auto;
 }
 
-/* Table styling  */
-
-#myTable {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#myTable td,
-#myTable th {
-  line-height: 10px;
-  border: 2px solid black;
-  padding: 8px;
-}
-
-#myTable tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#myTable tr:hover {
-  background-color: #ddd;
-}
-
-#myTable th {
-  height:40px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #6495ed;
-  color: white;
+form button {
+  background-color: #00008b;
 }
