@@ -21,6 +21,7 @@ let classArray = [];
     function erase() {
       classArray = [];
       picked = 'Nobody';
+      hchosen.innerText = ' ' + picked;
       combineSectors(classArray);
     }
 
