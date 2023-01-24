@@ -6,6 +6,7 @@ const center_y = 50;
 const radius = 60;
 let theta = 2000;
 let clrlight = 50;
+let clrdark = 20;
 let svg = document.querySelector('svg');
 
 const date = new Date();
