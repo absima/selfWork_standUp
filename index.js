@@ -20,6 +20,7 @@ let classArray = [];
 
     function erase() {
       classArray = [];
+      picked = 'Nobody';
       combineSectors(classArray);
     }
 
