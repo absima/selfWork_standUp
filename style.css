@@ -29,22 +29,6 @@ svg {
   transition: all ease 3s;
 }
 
-.delayed-grey {
-  animation: greyMeOut;
-  animation-duration: 3.1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes greyMeOut {
-  99% {
-    filter: grayscale(0);
-  }
-
-  100% {
-    filter: grayscale(0.9);
-  }
-}
-
 #header_row {
   justify-content: center;
   margin: auto;
