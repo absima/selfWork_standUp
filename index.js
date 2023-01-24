@@ -49,7 +49,7 @@ function demo() {
 }
 
 function addEntry() {
-  preventDefault();
+  event.preventDefault();
   let input = document.getElementById('inputadd').value;
 
   if (input === '' || classArray.includes(input)) {
@@ -61,7 +61,7 @@ function addEntry() {
 }
 
 function removeEntry() {
-  preventDefault();
+  event.preventDefault();
   let input = document.getElementById('inputrem').value;
   let index = classArray.indexOf(input);
   if (index > -1) {
