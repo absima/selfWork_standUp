@@ -1,3 +1,4 @@
+
 let classArray = [];
 let picked = 'Nobody';
 const visited = [];
@@ -11,6 +12,7 @@ let svg = document.querySelector('svg');
 
 const date = new Date();
 document.getElementById('h3').innerText += ' ' + date.toLocaleDateString();
+document.getElementById('cpyear').innerText += ' ' + date.getFullYear() + ' by Simachew'
 
 let hsize = document.getElementById('size');
 
