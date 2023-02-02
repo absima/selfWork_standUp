@@ -12,7 +12,7 @@ let svg = document.querySelector('svg');
 
 const date = new Date();
 document.getElementById('h3').innerText += ' ' + date.toLocaleDateString();
-document.getElementById('cpyear').innerText += ' ' + date.getFullYear() + ' by Simachew'
+document.getElementById('cpyear').innerText += ' ' + date.getFullYear() + ' Simachew'
 
 let hsize = document.getElementById('size');
 
